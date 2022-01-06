@@ -1,12 +1,19 @@
 # SIMPLE RESTFULL PHP API
 
+
+! THIS PROJECT IS NOT YET FINISHED !
+Current issue: 
+- lack of refactoring
+- controllers missing
+- more error cases and exeptions to handle
+
 This one was an interview test that I failed.
-I decided to do it again but on my own and from scratch for the sake of getting back to the php devlopment.
+I decided to do it again but on my own and from scratch for the sake of getting back to the php devlopment and because I think it's a cool use case.
 
 ## SPECS
 - No framework
 - PDO
-- RESTFUL Url (htaccess)
+- RESTFUL URL (.htaccess)
 
 ## THE API
 `_GET /books`
@@ -15,12 +22,11 @@ I decided to do it again but on my own and from scratch for the sake of getting 
 `_GET /books/{id}`
 > get specified book (by id)
 
-`_POST /book ` ['title', 'author']
-> post a new book
+`_POST /books` 
+> post a new book and show the record just after the query
+> optional: order = ('title' or 'author')
 
-
-## TO DO
-- api design
-- setup config file and database access
-- crud api
-- tests and refactoring
+_GET /author/{name}/books
+> get all the books from a given author name
+> mandatory: {name}
+> optional: order = ('id' or 'title')

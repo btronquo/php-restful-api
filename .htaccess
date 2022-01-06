@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# dont rewrite if its a directory or a folder
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^books/([0-9]+)$ controller/books.php?bookid=$1 [L]
+RewriteRule ^books$ controller/books.php [L]
+
+RewriteRule ^author/([a-z-_]+)/books$ controller/author.php?author_name=$1&order=$2 [QSA,L]

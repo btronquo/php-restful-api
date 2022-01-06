@@ -2,7 +2,9 @@
 
 
 ! THIS PROJECT IS NOT YET FINISHED !
-Current issue: 
+
+Current issues: 
+
 - lack of refactoring
 - controllers missing
 - more error cases and exeptions to handle
@@ -24,9 +26,9 @@ I decided to do it again but on my own and from scratch for the sake of getting 
 
 `_POST /books` 
 > post a new book and show the record just after the query
-> optional: order = ('title' or 'author')
+- optional: order = ('title' or 'author')
 
-_GET /author/{name}/books
+`_GET /author/{name}/books`
 > get all the books from a given author name
-> mandatory: {name}
-> optional: order = ('id' or 'title')
+- mandatory: {name}
+- optional: order = ('id' or 'title')
